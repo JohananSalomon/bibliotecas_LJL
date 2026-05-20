@@ -19,4 +19,3 @@ def listar_livro_autores():
     cursor.close()
     conn.close()
 
-listar_livro_autores()

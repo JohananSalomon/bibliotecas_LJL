@@ -19,4 +19,3 @@ def listar_itens_emprestimo():
     cursor.close()
     conn.close()
 
-listar_itens_emprestimo()

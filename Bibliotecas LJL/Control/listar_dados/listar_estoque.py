@@ -19,4 +19,3 @@ def listar_estoque():
     cursor.close()
     conn.close()
 
-listar_estoque()

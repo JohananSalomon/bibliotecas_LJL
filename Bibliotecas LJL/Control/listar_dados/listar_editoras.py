@@ -6,11 +6,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from conexao import conecta
 
-def listar_livros():
+def listar_editoras():
     conn = conecta()
     cursor = conn.cursor()
     
-    cursor.execute("SELECT titulo,isbn,ano_publicacao,quantidade,idioma,numero_paginas FROM livros")
+    cursor.execute("SELECT id_editoras, nome, cnpj, endereco, cidade, estado, telefone FROM editoras")
     resultados = cursor.fetchall()
     
     for i in resultados:
@@ -18,4 +18,3 @@ def listar_livros():
         
     cursor.close()
     conn.close()
-

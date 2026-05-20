@@ -19,4 +19,3 @@ def listar_emprestimos():
     cursor.close()
     conn.close()
 
-listar_emprestimos()

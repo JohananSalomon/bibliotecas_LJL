@@ -19,4 +19,3 @@ def listar_funcionarios():
     cursor.close()
     conn.close()
 
-listar_funcionarios()
