@@ -9,12 +9,11 @@ from conexao import conecta
 def listar_editoras():
     conn = conecta()
     cursor = conn.cursor()
-    
-    cursor.execute("SELECT id_editoras, nome, cnpj, endereco, cidade, estado, telefone FROM editoras")
-    resultados = cursor.fetchall()
-    
-    for i in resultados:
-        print(i)
-        
+    cursor.execute("SELECT * FROM editoras")
+    editoras = cursor.fetchall()
     cursor.close()
     conn.close()
+
+    for i in editoras:
+        print(i)
+    

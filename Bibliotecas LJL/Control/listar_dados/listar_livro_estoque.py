@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from conexao import conecta
 
-def listar_estoque():
+def listar_livro_estoque():
     conn = conecta()
     cursor = conn.cursor()
     

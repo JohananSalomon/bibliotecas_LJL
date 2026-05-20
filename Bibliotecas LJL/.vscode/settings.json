@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./Control/cadastrar"
+        "./Control/cadastrar",
+        "./Control/listar_dados"
     ]
 }
