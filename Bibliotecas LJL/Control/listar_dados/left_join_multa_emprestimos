@@ -1,0 +1,23 @@
+import mysql.connector
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from conexao import conecta
+
+def left_join_multa_emprestimos():
+    conn = conecta()
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT l.id_cliente, l.data_emprestimo,l.data_devolucao_prevista, l.status_emprestimo,l.valor_multa FROM multas c INNER JOIN emprestimos l ON c.id_emprestimo = l.id_emprestimo")
+    resultados = cursor.fetchall()
+    
+    for i in resultados:
+
+        print(i)
+        
+    cursor.close()
+    conn.close()
+
+left_join_multa_emprestimos()

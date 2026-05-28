@@ -9,28 +9,7 @@ def conecta():
         password="",
         database = "biblioteca"
     )
-    print ("conectado")
     return conexao
-
-
-conecta()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

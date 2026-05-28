@@ -47,7 +47,7 @@ def menu ():
         elif opcao == "2":
             sublistar()
         elif opcao == "3":
-            print("saindo")
+            print("saindo...")
             break
         else:
             print("\nopção invalida!\n")
