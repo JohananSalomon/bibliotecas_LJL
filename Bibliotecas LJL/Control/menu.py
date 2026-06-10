@@ -29,7 +29,8 @@ from cadastrar_multas import cadastrar_multas
 from listar_multas import listar_multas
 from cadastrar_itens_emprestimos import cadastrar_itens_emprestimos
 from listar_itens_emprestimo import listar_itens_emprestimo
-
+from deletar_funcionario import deletar_funcionario
+from deletar_multa import deletar_multa
 
 
 
@@ -39,7 +40,8 @@ def menu ():
     while True:
         print("1 - cadastrar")
         print("2 - Listar")
-        print("3 - Sair")
+        print("3 - Deletar")
+        print("4 - Sair")
         opcao = input("escolha uma opção: ") 
 
         if opcao == "1":
@@ -47,6 +49,8 @@ def menu ():
         elif opcao == "2":
             sublistar()
         elif opcao == "3":
+            deletar()
+        elif opcao == "4":
             print("saindo...")
             break
         else:
@@ -161,6 +165,27 @@ def sublistar():
             listar_multas()
 
         elif opcao == "12":
+            print("voltando ao menu principal")
+            break
+
+        else:
+            print ("\nopção invalida!\n")
+
+def deletar ():
+ while True:
+        print("== Deletar dados ==\n")
+        print("1 - Deletar funcionario")
+        print("2 - Deletar multa")
+        print("3 - Voltar ao menu principal")
+        opcao = input("\nEscolha!:")
+
+        if opcao == "1":
+            deletar_funcionario()
+
+        elif opcao == "2":
+            deletar_multa()
+
+        elif opcao == "3":
             print("voltando ao menu principal")
             break
 
