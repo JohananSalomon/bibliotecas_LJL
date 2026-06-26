@@ -4,8 +4,10 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from conexao import conecta
-sys.path.append("Control/cadastrar")
-sys.path.append("Control/listar_dados")
+sys.path.append("cadastrar")
+sys.path.append("listar_dados")
+sys.path.append("deletar")
+sys.path.append("inner_join")
 
 from cadastrar_autores import cadastrar_autores
 from listar_autores import listar_autores
@@ -31,6 +33,7 @@ from cadastrar_itens_emprestimos import cadastrar_itens_emprestimos
 from listar_itens_emprestimo import listar_itens_emprestimo
 from deletar_funcionario import deletar_funcionario
 from deletar_multa import deletar_multa
+from inner_join_livro_estoque import inner_join_livro_estoque
 
 
 
@@ -193,3 +196,33 @@ def deletar ():
             print ("\nopção invalida!\n")
 
 menu()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

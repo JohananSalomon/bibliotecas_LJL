@@ -11,18 +11,16 @@ def deletar_funcionario ():
     if id_del_funcionario == '':
         print ("Digite uma opção válida!")
         return
+    
+    conexao = conecta()
+    cursor = conexao.cursor()
 
-sql = "delete from funcionarios where id_funcionario = '%s'"
+    sql = "delete from funcionarios where id_funcionario = '%s'"% (id_del_funcionario)  
 
-conexao = conecta()
-cursor = conexao.cursor()
+    cursor.execute(sql)
+    conexao.commit()
 
-cursor.execute(sql)
-conexao.commit()
-
-cursor.close()
-conexao.close()
-
-
-deletar_funcionario () 
-print ("funcionario deletado com sucesso!")
+    cursor.close()
+    conexao.close()
+ 
+    print ("funcionario deletado com sucesso!")

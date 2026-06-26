@@ -7,7 +7,9 @@ from conexao import conecta
 def join_livros_categorias():
     conn = conecta()
     cursor = conn.cursor()
-    cursor.execute("SELECT l.titulo, l.ano_publicacao, c.nome FROM categorias c INNER JOIN livros l ON c.id_categoria = l.id_categoria")
+    cursor.execute("create view livros_categorias as SELECT l.titulo, l.ano_publicacao, c.nome FROM categorias c INNER JOIN livros l ON c.id_categoria = l.id_categoria")
+    conn.commit()
+    cursor.execute("select * from livros_categorias")   
     categorias = cursor.fetchall()
     cursor.close()
     conn.close()
@@ -15,7 +17,7 @@ def join_livros_categorias():
     for i in categorias:
         print(i)
 
-join_livros_categorias()
+
 
 
 
