@@ -29,7 +29,7 @@ def left_join_multa_emprestimos():
     cursor.close()
     conn.close()
 
-left_join_multa_emprestimos()
+
 
 
 

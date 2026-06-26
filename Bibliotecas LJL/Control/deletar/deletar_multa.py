@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))   
 from conexao import conecta
 
-def deletar_multas():
+def deletar_multa():
     id_del_multas = input("Qual funcionario deseja deletar?:")
 
     if id_del_multas == '':
@@ -24,5 +24,6 @@ def deletar_multas():
     cursor.close()
     conexao.close()
 
-deletar_multas()
-print ("multa deletado com sucesso!")
+if __name__ == '__main__':
+    deletar_multas()
+    print("multa deletado com sucesso!")
