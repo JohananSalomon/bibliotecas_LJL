@@ -7,7 +7,7 @@ from conexao import conecta
 def inner_join_livro_estoque():
     conn = conecta()
     cursor = conn.cursor()
-    cursor.execute("SELECT l.titulo, l.quantidade, c.id_estoque,c.localizacao FROM  c INNER JOIN livros l ON c.id_livro = l.id_livro")
+    cursor.execute("SELECT l.titulo, l.quantidade, c.id_estoque,c.localizacao FROM estoque c INNER JOIN livros l ON c.id_livro = l.id_livro")
     categorias = cursor.fetchall()
     cursor.close()
     conn.close()
